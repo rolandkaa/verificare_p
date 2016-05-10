@@ -1,0 +1,1 @@
+# verificare_p
