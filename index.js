@@ -1,0 +1,45 @@
+
+var restify = require('restify');
+
+var server = restify.createServer();
+
+server.use(restify.fullResponse());
+server.use(restify.bodyParser());
+
+
+// Start the service to listen on the
+
+
+var port = 3000;
+server.listen(process.env.PORT || port  , function (err) {
+    if (err)
+        console.error(err)
+    else
+        console.log('Rest Demo App is ready at : ' + process.env.PORT || port )
+});
+
+
+// Set the routes for the defeault html file
+server.get("/", restify.serveStatic({
+    'directory': '.',
+    'default': 'client.html'
+}));
+
+
+
+server.get("/demo/getexample", function(req, res) {
+
+    var respRandomValue = Math.floor(Math.random() * 10 + 1) ;
+
+    console.log('request  description: ', respRandomValue);
+    res.json({type: true, data: 'Answer for the laszloswork  v1.0: ' + respRandomValue});
+
+
+    // prepare the json answer
+    //res.json({type: true, data: 'Answer for the get Answer '});
+});
+
+
+
+
+
