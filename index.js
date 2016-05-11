@@ -12,7 +12,7 @@ server.listen(process.env.PORT || port  , function (err) {
     if (err)
         console.error(err)
     else
-        console.log('Rest Demo App is ready at : ' + process.env.PORT || port )
+        console.log('Rest App is ready at : ' + process.env.PORT || port )
 });
 
 
@@ -31,10 +31,6 @@ server.get("/demo/getexample", function(req, res) {
     var respRandomValue3 = Math.floor(Math.random() * 10 + 1) ;
     console.log('request  description: ', respRandomValue); 
     res.json({type: true, data: 'A:'+ respRandomValue+' '+respRandomValue2+' '+respRandomValue3});
-
-
-    // prepare the json answer
-    //res.json({type: true, data: 'Answer for the get Answer '});
 });
 
 
