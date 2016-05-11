@@ -28,8 +28,9 @@ server.get("/demo/getexample", function(req, res) {
 
     var respRandomValue = Math.floor(Math.random() * 10 + 1) ;
     var respRandomValue2 = Math.floor(Math.random() * 10 + 1) ;
+    var respRandomValue3 = Math.floor(Math.random() * 10 + 1) ;
     console.log('request  description: ', respRandomValue); 
-    res.json({type: true, data: 'A:'+ respRandomValue+' '+respRandomValue2});
+    res.json({type: true, data: 'A:'+ respRandomValue+' '+respRandomValue2+' '+respRandomValue3});
 
 
     // prepare the json answer
