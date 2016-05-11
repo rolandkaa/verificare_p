@@ -12,7 +12,7 @@ server.listen(process.env.PORT || port  , function (err) {
     if (err)
         console.error(err)
     else
-        console.log('Rest Demo App is ready at : ' + process.env.PORT || port )
+        console.log('Rest App is ready at : ' + process.env.PORT || port )
 });
 
 
