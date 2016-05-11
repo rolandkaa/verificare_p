@@ -7,9 +7,6 @@ server.use(restify.fullResponse());
 server.use(restify.bodyParser());
 
 
-// Start the service to listen on the
-
-
 var port = 3000;
 server.listen(process.env.PORT || port  , function (err) {
     if (err)
