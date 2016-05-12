@@ -12,8 +12,8 @@
 
 <div id="mainpart">
 
-    <input  type="button" name="Click" value="Push to send a REST " onclick="myRestFunc()" >
-    &nbsp Message from Server: &nbsp <span id="message_from_server">  Meg semmi    </span>
+    <input  type="button" name="Click" value="Random number " onclick="myRestFunc()" >
+    &nbsp Message from Server: &nbsp <span id="message_from_server">  -   </span>
 
 </div>
 
@@ -21,7 +21,6 @@
         function myRestFunc(){
             // prepare the asynchronous  call
             $.ajax({
-                /* url: 'http://localhost:3000/demo/getexample', */ 
 		url:'https://probaaaa001.herokuapp.com/demo/getexample', 
                 type: 'GET',
                 dataType: 'json'
