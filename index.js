@@ -30,7 +30,7 @@ server.get("/demo/getexample", function(req, res) {
     var respRandomValue2 = Math.floor(Math.random() * 10 + 1) ;
     var respRandomValue3 = Math.floor(Math.random() * 10 + 1) ;
     console.log('request  description: ', respRandomValue); 
-    res.json({type: true, data: 'A:'+ respRandomValue+' '+respRandomValue2+' '+respRandomValue3});
+    res.json({type: true, data: 'A:'+ respRandomValue+''+respRandomValue2+''+respRandomValue3});
 });
 
 
